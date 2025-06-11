@@ -19,8 +19,10 @@ public class TextFadeOut : MonoBehaviour
             return;
 
         if (fade_started)
+        {
             canvas_group.alpha = canvas_group.alpha -= Time.deltaTime;
-
+            canvas_group.blocksRaycasts = false;
+        }
         if (canvas_group.alpha <= 0)
             Destroy(gameObject);
     }

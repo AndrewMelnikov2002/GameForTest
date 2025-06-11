@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: 7d1e86649d1d4354ca8ab8b970c81408
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: celianna_ground_grass
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b166fd2a699bce43baecdd649bcc5c8
+      internalID: 1247834386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_u_l
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36ac29ecccb3e44190853cf84a563bf
+      internalID: -928678955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_u
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a135deefc7a2974186fdeeb5da7fcb7
+      internalID: -524884034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_u_r
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d610cb1a81f22d4c995440be71a6983
+      internalID: 65369222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_small
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8159b5d50dfa6499e3212663b01a76
+      internalID: 1576040115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_center
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34522989ad7d6714cbbba411b5fd9097
+      internalID: -1392401350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451cfd3e009713e49b01bc4be6bcdf83
+      internalID: 285655943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_cross
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4456a2a4a154c94d95f89f368961768
+      internalID: -1421070137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_l
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7422eecb7c62a4ea0d21d0e7de6a48
+      internalID: -1608596888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_c
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154cbd8be8b28894697904c32e991646
+      internalID: -1738035953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_r
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a44b92a19758ce45b78fa8c00c6ad85
+      internalID: 95500737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_u_l
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a3a6b3d53048643bdf05576e8a6a6c
+      internalID: -685532607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_u_r
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f22e7a030364d4a996392f888e8c27
+      internalID: 572610794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_l_angle
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63413d8631978b547bc4d1deb3e9123c
+      internalID: -317832739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_r_angel
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1bb07d5cd227849baf2369c067bf8f
+      internalID: -1588067522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_d_l
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba23d175bd1d314781f48c2c7ad2d5c
+      internalID: -1570973518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_d
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06dd2421b3ff954f89a664c422ff360
+      internalID: 1600112028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_ground_stone_d_r
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67af55b69006aed43a2f8eeaf498bf19
+      internalID: -632152889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_d_l
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc77e17a456fad4ab757896f3f1034e
+      internalID: 168280015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_d_r
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d712511d7858eed488d1039015075a64
+      internalID: 1596883367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_l_end
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cb459bfb51b174ab9133297f1fe94b
+      internalID: 788089770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_r_end
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a798bf61e63a2fd459e2e6e04c45d084
+      internalID: -917172831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_2_small
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffca87a48a7447468ab27df6e969d2a
+      internalID: 234872022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_2_c
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21670397d1cef0c42bfad85d2e3b891b
+      internalID: 576340487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_2_u_l
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28a81a9f23335f42b0b064c54ca6e4f
+      internalID: 1260601882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_2_u_r
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d36d48a5ccae14f993cad31bc71faa
+      internalID: -1381377013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_2_d_l
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3575536bfcc49d54097e9d2a90924be2
+      internalID: -1708567071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_grass_2_d_r
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494893eaa6496c24993ffe86ea21f37c
+      internalID: -1619091347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: celianna_fence_center
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef2decf932c56046bcffe874dae50d7
+      internalID: -650946940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      celianna_TileA2_100: 1861351413
+      celianna_TileA2_101: 518058708
+      celianna_TileA2_102: 2091077323
+      celianna_TileA2_103: 1332811659
+      celianna_TileA2_104: -1464483699
+      celianna_TileA2_105: -1261129593
+      celianna_TileA2_106: -7829087
+      celianna_TileA2_107: -1790095889
+      celianna_TileA2_108: 1572375092
+      celianna_TileA2_109: 2127536882
+      celianna_TileA2_110: 352349271
+      celianna_TileA2_111: 905606720
+      celianna_TileA2_112: -72450570
+      celianna_TileA2_113: 438451717
+      celianna_TileA2_114: -1808266562
+      celianna_TileA2_115: 911191491
+      celianna_TileA2_116: -1784004972
+      celianna_TileA2_117: 1127995600
+      celianna_TileA2_118: 218453912
+      celianna_TileA2_119: 267790811
+      celianna_TileA2_12: 2029171561
+      celianna_TileA2_120: 1100625021
+      celianna_TileA2_121: 221853496
+      celianna_TileA2_122: 1790760017
+      celianna_TileA2_123: -447213011
+      celianna_TileA2_124: -2118890338
+      celianna_TileA2_125: 1845836861
+      celianna_TileA2_126: -1890792089
+      celianna_TileA2_127: -181131924
+      celianna_TileA2_128: 99075831
+      celianna_TileA2_129: 2127962289
+      celianna_TileA2_13: 325689307
+      celianna_TileA2_130: -1897131857
+      celianna_TileA2_131: -1710803507
+      celianna_TileA2_132: 495543237
+      celianna_TileA2_133: 1465340070
+      celianna_TileA2_134: -1361046528
+      celianna_TileA2_135: -602433361
+      celianna_TileA2_136: -1779792493
+      celianna_TileA2_137: 1993977959
+      celianna_TileA2_138: -969131279
+      celianna_TileA2_139: -917260523
+      celianna_TileA2_14: -922265868
+      celianna_TileA2_140: -1974085853
+      celianna_TileA2_141: 923055392
+      celianna_TileA2_142: -2084843264
+      celianna_TileA2_143: -1964393548
+      celianna_TileA2_144: -643550969
+      celianna_TileA2_145: 1851962829
+      celianna_TileA2_146: -1817094343
+      celianna_TileA2_147: 1898360895
+      celianna_TileA2_148: 1839232141
+      celianna_TileA2_149: -904016150
+      celianna_TileA2_15: 1038558892
+      celianna_TileA2_150: 120534501
+      celianna_TileA2_151: -1293962460
+      celianna_TileA2_152: 780661725
+      celianna_TileA2_153: 974410439
+      celianna_TileA2_154: -621921073
+      celianna_TileA2_155: 1695641592
+      celianna_TileA2_156: 1464711659
+      celianna_TileA2_157: -199971325
+      celianna_TileA2_158: -1209753251
+      celianna_TileA2_159: 1796928947
+      celianna_TileA2_16: 1831164838
+      celianna_TileA2_160: 865046399
+      celianna_TileA2_161: -1725495502
+      celianna_TileA2_162: -2127330811
+      celianna_TileA2_163: 773562211
+      celianna_TileA2_164: -1248919894
+      celianna_TileA2_165: 1023307237
+      celianna_TileA2_166: 1754399197
+      celianna_TileA2_167: 1818495736
+      celianna_TileA2_168: 181708870
+      celianna_TileA2_169: -1142455983
+      celianna_TileA2_17: 1532058046
+      celianna_TileA2_170: -270980783
+      celianna_TileA2_171: 355145606
+      celianna_TileA2_172: -835469466
+      celianna_TileA2_173: -856544329
+      celianna_TileA2_174: -1274379572
+      celianna_TileA2_175: -2092534358
+      celianna_TileA2_176: -57879323
+      celianna_TileA2_177: -1931349720
+      celianna_TileA2_178: -1425993780
+      celianna_TileA2_179: 548462987
+      celianna_TileA2_18: 1052410848
+      celianna_TileA2_180: 1681292288
+      celianna_TileA2_181: 519470895
+      celianna_TileA2_182: -715073625
+      celianna_TileA2_183: -803949716
+      celianna_TileA2_184: -1538557010
+      celianna_TileA2_185: -1408029209
+      celianna_TileA2_186: -103223883
+      celianna_TileA2_187: 1216199690
+      celianna_TileA2_188: 933087397
+      celianna_TileA2_189: -1849227379
+      celianna_TileA2_19: -194442299
+      celianna_TileA2_190: -2028718993
+      celianna_TileA2_191: -527962838
+      celianna_TileA2_2: 136013269
+      celianna_TileA2_20: 497718422
+      celianna_TileA2_28: 432654526
+      celianna_TileA2_29: 978291241
+      celianna_TileA2_3: -2102057266
+      celianna_TileA2_30: -1767344566
+      celianna_TileA2_31: 1806219098
+      celianna_TileA2_32: -952766939
+      celianna_TileA2_33: -953954397
+      celianna_TileA2_34: -1892825040
+      celianna_TileA2_35: 142083439
+      celianna_TileA2_36: -751789547
+      celianna_TileA2_4: -627909684
+      celianna_TileA2_44: 529312156
+      celianna_TileA2_45: -517180227
+      celianna_TileA2_46: -703478167
+      celianna_TileA2_47: -2038824906
+      celianna_TileA2_48: -1072219366
+      celianna_TileA2_49: 1524776143
+      celianna_TileA2_50: 2130649791
+      celianna_TileA2_51: -1989976945
+      celianna_TileA2_52: -1668869780
+      celianna_TileA2_53: 355876840
+      celianna_TileA2_54: 2017087544
+      celianna_TileA2_55: -1127744638
+      celianna_TileA2_58: -411139091
+      celianna_TileA2_59: 843100088
+      celianna_TileA2_60: 155610006
+      celianna_TileA2_61: 1182346942
+      celianna_TileA2_62: 660962978
+      celianna_TileA2_63: -871373793
+      celianna_TileA2_64: 1570373957
+      celianna_TileA2_65: -470566197
+      celianna_TileA2_66: 1566493323
+      celianna_TileA2_67: -1380197588
+      celianna_TileA2_68: -1612795093
+      celianna_TileA2_69: 1411427161
+      celianna_TileA2_70: 1197484445
+      celianna_TileA2_71: -1310717638
+      celianna_TileA2_74: -1458513430
+      celianna_TileA2_75: -1404239804
+      celianna_TileA2_76: 375040462
+      celianna_TileA2_77: 398341722
+      celianna_TileA2_78: 751190614
+      celianna_TileA2_79: 2059851523
+      celianna_TileA2_80: -803886961
+      celianna_TileA2_81: 1625687494
+      celianna_TileA2_82: -918888845
+      celianna_TileA2_83: 1310847589
+      celianna_TileA2_84: 184226979
+      celianna_TileA2_85: 1230701430
+      celianna_TileA2_86: 1175741000
+      celianna_TileA2_87: -274926182
+      celianna_TileA2_90: 202797683
+      celianna_TileA2_91: -2118708100
+      celianna_TileA2_92: -602783479
+      celianna_TileA2_93: 794749614
+      celianna_TileA2_94: -760962348
+      celianna_TileA2_95: -421473444
+      celianna_TileA2_96: 1140319579
+      celianna_TileA2_97: -1318673642
+      celianna_TileA2_98: 1564416230
+      celianna_TileA2_99: 606658047
+      celianna_fence_1: 285655943
+      celianna_fence_center: -650946940
+      celianna_fence_cross: -1421070137
+      celianna_fence_l_angle: -317832739
+      celianna_fence_l_end: 788089770
+      celianna_fence_r_angel: -1588067522
+      celianna_fence_r_end: -917172831
+      celianna_grass_2_c: 576340487
+      celianna_grass_2_d_l: -1708567071
+      celianna_grass_2_d_r: -1619091347
+      celianna_grass_2_small: 234872022
+      celianna_grass_2_u_l: 1260601882
+      celianna_grass_2_u_r: -1381377013
+      celianna_grass_center: -1392401350
+      celianna_grass_d_l: 168280015
+      celianna_grass_d_r: 1596883367
+      celianna_grass_small: 1576040115
+      celianna_grass_u_l: -685532607
+      celianna_grass_u_r: 572610794
+      celianna_ground_grass: 1247834386
+      celianna_ground_stone_c: -1738035953
+      celianna_ground_stone_d: 1600112028
+      celianna_ground_stone_d_l: -1570973518
+      celianna_ground_stone_d_r: -632152889
+      celianna_ground_stone_l: -1608596888
+      celianna_ground_stone_r: 95500737
+      celianna_ground_stone_u: -524884034
+      celianna_ground_stone_u_l: -928678955
+      celianna_ground_stone_u_r: 65369222
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

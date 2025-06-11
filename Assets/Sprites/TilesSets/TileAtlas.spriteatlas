@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TileAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 285655943, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1619091347, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1708567071, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 1576040115, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1608596888, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1738035953, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 1600112028, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 95500737, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -524884034, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 1247834386, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1381377013, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1421070137, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -632152889, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 576340487, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1570973518, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 1260601882, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -650946940, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -317832739, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -685532607, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 572610794, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 65369222, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1588067522, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -928678955, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -917172831, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 168280015, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: -1392401350, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 234872022, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 1596883367, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  - {fileID: 788089770, guid: 7d1e86649d1d4354ca8ab8b970c81408, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - celianna_fence_1
+  - celianna_grass_2_d_r
+  - celianna_grass_2_d_l
+  - celianna_grass_small
+  - celianna_ground_stone_l
+  - celianna_ground_stone_c
+  - celianna_ground_stone_d
+  - celianna_ground_stone_r
+  - celianna_ground_stone_u
+  - celianna_ground_grass
+  - celianna_grass_2_u_r
+  - celianna_fence_cross
+  - celianna_ground_stone_d_r
+  - celianna_grass_2_c
+  - celianna_ground_stone_d_l
+  - celianna_grass_2_u_l
+  - celianna_fence_center
+  - celianna_fence_l_angle
+  - celianna_grass_u_l
+  - celianna_grass_u_r
+  - celianna_ground_stone_u_r
+  - celianna_fence_r_angel
+  - celianna_ground_stone_u_l
+  - celianna_fence_r_end
+  - celianna_grass_d_l
+  - celianna_grass_center
+  - celianna_grass_2_small
+  - celianna_grass_d_r
+  - celianna_fence_l_end
+  m_RenderDataMap: {}
+  m_Tag: TileAtlas
+  m_IsVariant: 0

@@ -153,6 +153,9 @@ public class PlayerController : MonoBehaviour
 
     private void Death()
     {
+        if (is_player_dead)
+            return;
+
         is_player_dead = true;
 
         player_sprite.enabled = false;

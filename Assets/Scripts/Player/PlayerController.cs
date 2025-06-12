@@ -1,77 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    private GameController game_controller;
     private Animator anim;
     private FixedJoystick joystick;
-    private SaveSystem save_system;
+    private Rigidbody2D rb;
+
+
+    private bool is_player_dead = false;
 
     [Header("Main")]
     [SerializeField] [Range(0,100)] private float player_health = 100;
     [SerializeField] private HealthBar health_bar;
-    private bool is_player_dead = false;
-    private Rigidbody2D rb;
-
-    [SerializeField] private int global_score = 0;
-
-    [Space(20)]
-    [Header("Visual")]
-    [SerializeField] private SpriteRenderer player_sprite;
-    [SerializeField] private ParticleSystem death_effect;
-
-
-
-    [Space(20)]
-    [Header("Movement")]
+    [Space(10)]
     [SerializeField] private float move_speed;
+    [Space(10)]
+    [SerializeField] private SpriteRenderer player_sprite;
+    private Vector3 move_direction = Vector3.zero;
+
+
+    [Space(20)]
+    [Header("Effects")]
+    [SerializeField] private ParticleSystem death_effect;
 
 
     [Space(20)]
     [Header("Gun")]
+    [SerializeField] private float shoot_cooldown = 0.5f;
+    [Space(10)]
     [SerializeField] private SpriteRenderer gun_sprite;
     [SerializeField] private Transform gun_holder;
     [Space(10)]
     [SerializeField] private ParticleSystem shoot_effect;
     [Space(10)]
     [SerializeField] private GameObject bullet_prefab;
+    private float shoot_cooldown_timer = 0;
+    private float gun_angle = 0;
 
 
-    //[Space(20)]
-    //[Header("Sounds")]
-    //[SerializeField] private AudioClip shoot_sound;
-
-    //[SerializeField] private AudioClip damage_sound;
-
-    //[SerializeField] private AudioClip death_sound;
-
-    //private AudioSource audio_source;
-
-    [Space(20)]
-    [Header("Other")]
-    [SerializeField] private Blackscreen black_screen;
-    [SerializeField] private RestartScreen restart_screen;
-
-    [SerializeField] private Text score_text;
 
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
-
+        game_controller = FindFirstObjectByType<GameController>();
         joystick = FindFirstObjectByType<FixedJoystick>();
-
-        save_system = GetComponent<SaveSystem>();
-
-        //audio_source = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
 
         if (joystick == null)
             Debug.LogError("Not Found FixedJoystik!");
 
         FindFirstObjectByType<CameraTracking>().SetTarget(transform);
-        rb = GetComponent<Rigidbody2D>();
 
         if (health_bar != null)
         {
@@ -80,30 +59,11 @@ public class PlayerController : MonoBehaviour
         }
         else
             Debug.LogWarning("No player health bar!");
-
-        black_screen = FindFirstObjectByType<Blackscreen>();
-
-        SaveData save = save_system.LoadProgress();
-
-        if(save != null)
-        {
-            global_score = save.score;
-
-            score_text.text = "Global Score: " + global_score;
-
-            FindFirstObjectByType<InventorySystem>().LoadInventory(save.inventory);
-        }
     }
 
-    float save_timer;
 
-    float gun_angle = 0;
-    Vector3 move_direction = Vector3.zero;
     private void Update()
     {
-        if (rb.velocity.magnitude > 0)
-            rb.velocity += -rb.velocity * Time.deltaTime * 5f;
-
         if (!is_player_dead)
         {
             if (joystick.Direction != Vector2.zero)
@@ -113,16 +73,6 @@ public class PlayerController : MonoBehaviour
 
                 transform.position += move_direction * Time.deltaTime * move_speed;
             }
-
-            if (save_timer > 0)
-                save_timer -= Time.deltaTime;
-            else
-            {
-                save_timer = 3f;
-
-                save_system.SaveProgress(global_score,FindFirstObjectByType<InventorySystem>().Inventory);
-            }
-
 
             anim.SetBool("is_walk", joystick.Direction != Vector2.zero);
 
@@ -139,19 +89,20 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
                 Shoot();
 
-            if (Input.GetKeyDown(KeyCode.F7))
-                save_system.CleanSave();
-
-            if (shoot_cooldown > 0)
-                shoot_cooldown -= Time.deltaTime;
+            if (shoot_cooldown_timer > 0)
+                shoot_cooldown_timer -= Time.deltaTime;
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (rb.velocity.magnitude > 0)
+            rb.velocity += -rb.velocity * Time.deltaTime * 5f;
+    }
 
-    private float shoot_cooldown = 0;
     public void Shoot()
     {
-        if (shoot_cooldown > 0)
+        if (shoot_cooldown_timer > 0)
             return;
 
         shoot_effect.Play();
@@ -162,32 +113,12 @@ public class PlayerController : MonoBehaviour
 
         bullet.rotation = gun_holder.rotation;
 
-        shoot_cooldown = 0.5f;
-
-        //audio_source.PlayOneShot(shoot_sound);
-    }
-
-
-    private void Death()
-    {
-        is_player_dead = true;
-
-        player_sprite.enabled = false;
-        gun_sprite.enabled = false;
-
-        death_effect.Play();
-
-        black_screen.gameObject.SetActive(true);
-        black_screen.FadeIn();
-
-        StartCoroutine(ShowRestartScreen());
+        shoot_cooldown_timer = shoot_cooldown;
     }
 
     public void GetDamage(float damage, Vector3 direction)
     {
-
-
-        if(player_health > damage)
+        if (player_health > damage)
         {
             player_health -= damage;
 
@@ -209,32 +140,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Restart()
+    public void HealPlayer(float heal)
     {
-        Debug.Log("Restarting...");
-        SceneManager.LoadScene(0);
+        player_health += Mathf.Abs(heal);
+        player_health = Mathf.Clamp(player_health, 0, 100);
+
+        if (health_bar != null)
+            health_bar.SetAmount(player_health / 100);
+
+        anim.SetTrigger("heal");
     }
 
-    IEnumerator ShowRestartScreen()
+    private void Death()
     {
-        yield return new WaitForSeconds(3f);
+        is_player_dead = true;
 
-        restart_screen.gameObject.SetActive(true);
-        restart_screen.SetAlpha(0);
+        player_sprite.enabled = false;
+        gun_sprite.enabled = false;
+
+        death_effect.Play();
+
+        game_controller.EndGame();
     }
 
     public bool IsDead { get { return is_player_dead; } }
-
-    public void AddScore() { global_score += 1; score_text.text = "Global Score: " + global_score; }
-
-
-}
-
-[System.Serializable]
-public class SaveData 
-{
-    public int score;
-
-    public List<InventoryItem> inventory;
 }
 

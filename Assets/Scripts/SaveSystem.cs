@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SaveSystem : MonoBehaviour
 {
-
     public void SaveProgress(int global_score, List<InventoryItem> inventory)
     {
         SaveData new_save = new SaveData();
@@ -18,6 +17,8 @@ public class SaveSystem : MonoBehaviour
         string json_save = JsonUtility.ToJson(new_save);
 
         File.WriteAllText(Application.persistentDataPath + "/save.json", json_save);
+
+        //Debug.Log("Game Progress Saved");
     }
 
     public void CleanSave()
@@ -50,4 +51,13 @@ public class SaveSystem : MonoBehaviour
         return save;
     }
 
+}
+
+
+[System.Serializable]
+public class SaveData
+{
+    public int score;
+
+    public List<InventoryItem> inventory;
 }

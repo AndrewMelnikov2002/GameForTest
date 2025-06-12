@@ -1,26 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] private float bullet_speed = 1f;
-
     [SerializeField] private float life_time;
-    private float timer;
+    
+    private float life_timer;
 
-    private void Start()
-    {
-        timer = life_time;
-    }
+    private void Start() { life_timer = life_time; }
 
     void Update()
     {
         transform.position = transform.position + (transform.right * (bullet_speed * Time.deltaTime));
 
-        timer -= Time.deltaTime;
+        life_timer -= Time.deltaTime;
 
-        if (timer <= 0)
+        if (life_timer <= 0)
             Destroy(gameObject);
     }
 

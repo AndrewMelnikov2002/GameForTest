@@ -1,20 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour
 {
+    [Header("Inventory")]
     [SerializeField] private List<InventoryItem> inventory;
+
+
+
+    [Space(20)]
+    [Header("UI")]
     [SerializeField] private List<InventorySlot> ui_slots;
+    [Space(10)]
 
-    [SerializeField] private GameObject remove_button;
-
-    [SerializeField] private GameObject inventory_button;
-
-    [SerializeField] private GameObject slots_panel;
-
+    [SerializeField] private CanvasGroupFade slots_panel_fade;
+    [SerializeField] private CanvasGroupFade remove_button_fade;
+    [Space(10)]
     [SerializeField] private Text selected_item_name;
+
 
     private void Start()
     {
@@ -25,6 +29,12 @@ public class InventorySystem : MonoBehaviour
             ui_slots[i].SetID(i);
             ui_slots[i].SetInventorySystem(this);
         }
+
+        CanvasGroup rmv_btn_cg = remove_button_fade.GetComponent<CanvasGroup>();
+
+        rmv_btn_cg.alpha = 0;
+        rmv_btn_cg.interactable = false;
+        rmv_btn_cg.blocksRaycasts = false;
 
         selected_item_name.text = "";
     }
@@ -54,37 +64,46 @@ public class InventorySystem : MonoBehaviour
     }
 
 
-    public void RemoveItem()
+    private void RemoveItem(int id)
     {
-        if (inventory[selected_slot_id].count == 1)
+        if (inventory[id].count == 1)
         {
 
-            inventory[selected_slot_id].id = "";
-            inventory[selected_slot_id].count = 0;
-            inventory[selected_slot_id].config = null;
+            inventory[id].id = "";
+            inventory[id].count = 0;
+            inventory[id].config = null;
 
-            ui_slots[selected_slot_id].UpdateSlot(null, 0);
+            ui_slots[id].UpdateSlot(null, 0);
 
-            ui_slots[selected_slot_id].SelectedEnabled(false);
+            ui_slots[id].SelectedEnabled(false);
 
             selected_slot_id = -1;
 
-            remove_button.SetActive(false);
+            remove_button_fade.StartFadeOut(4f);
 
             selected_item_name.text = "";
 
         }
         else
         {
-            inventory[selected_slot_id].count -= 1;
-            ui_slots[selected_slot_id].UpdateSlot(inventory[selected_slot_id].config.Icon, inventory[selected_slot_id].count);
+            inventory[id].count -= 1;
+            ui_slots[id].UpdateSlot(inventory[selected_slot_id].config.Icon, inventory[id].count);
         }
+    }
+
+    public void RemoveItemButtonEvent()
+    {
+        if (selected_slot_id >= 0)
+            RemoveItem(selected_slot_id);
     }
 
 
     private int selected_slot_id = -1;
     public void SlotSelected(int id)
     {
+        if (selected_slot_id == id)
+            return;
+
         foreach (InventorySlot slot in ui_slots)
             slot.SelectedEnabled(false);
 
@@ -92,22 +111,41 @@ public class InventorySystem : MonoBehaviour
 
         selected_slot_id = id;
 
-        remove_button.SetActive(true);
+        remove_button_fade.StartFadeIn(4f);
 
         selected_item_name.text = inventory[selected_slot_id].config.InGameName;
     }
 
+    public void ItemUsed(int id)
+    {
+        if (inventory[id].id == "health_potion")
+        {
+            RemoveItem(id);
+
+            FindAnyObjectByType<PlayerController>().HealPlayer(50);
+        }
+    }
+
+
+
 
     public void ShowInventory()
-    {
-        slots_panel.SetActive(!slots_panel.activeSelf);
+    {      
+        if(!slots_panel_fade.GetComponent<CanvasGroup>().interactable)
+            slots_panel_fade.StartFadeIn(4f);
+        else
+            slots_panel_fade.StartFadeOut(4f);
 
         selected_slot_id = -1;
 
         for (int i = 0; i < ui_slots.Count; i++)
             ui_slots[i].SelectedEnabled(false);
 
-        remove_button.SetActive(false);
+
+        if(remove_button_fade.GetComponent<CanvasGroup>().interactable)
+            remove_button_fade.StartFadeOut(4f);
+
+
         selected_item_name.text = "";
     }
 
@@ -127,9 +165,6 @@ public class InventorySystem : MonoBehaviour
         }
     }
 }
-
-
-
 
 [System.Serializable]
 public class InventoryItem

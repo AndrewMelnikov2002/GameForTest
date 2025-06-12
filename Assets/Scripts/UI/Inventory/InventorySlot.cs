@@ -3,10 +3,14 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public InventorySystem inventory;
+    private InventorySystem inventory;
 
+    [Header("General")]
     [SerializeField] private int slot_id;
 
+
+    [Space(20)]
+    [Header("UI")]
     [SerializeField] private Image outline_image;
     [SerializeField] private Image icon;
     [SerializeField] private Text count_text;
@@ -37,5 +41,21 @@ public class InventorySlot : MonoBehaviour
 
     public void SelectedEnabled(bool enabled) { outline_image.enabled = enabled; }
 
-    public void Selected() {if (icon.enabled) inventory.SlotSelected(slot_id); }
+
+    private float last_click_time = 0;
+    public void Selected()
+    {
+
+        float time_from_last_click = Time.time - last_click_time;
+
+        last_click_time = Time.time;
+
+        if (icon.enabled)
+        {
+            inventory.SlotSelected(slot_id);
+
+            if (time_from_last_click < 0.25f)
+                inventory.ItemUsed(slot_id);
+        }
+    }
 }
